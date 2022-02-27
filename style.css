@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.navbar{
+  width: 100%;
+  padding: 15px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+.navbar.scroll{
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+.navbar .title{
+  font-size: 30px;
+  font-weight: 600;
+}
+.navbar .link{
+  padding: 10px;
+}
+.navbar .link ul{
+  display: flex;
+}
+.navbar .link ul li{
+  list-style: none;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.navbar .link ul li a{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .link ul li:hover{
+  background: black;
+}
+.navbar .link ul li:hover a{
+  color: white;
+}
+.navbar .bars{
+  display: none;
+}
+.home{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.home .content{
+  width: 500px;
+}
+.home .content .say{
+  font-size: 30px;
+  font-weight: 600;
+}
+.home .content .work{
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: crimson;
+}
+.home .content a{
+  background: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.about,
+.skill{
+  width: 100%;
+  padding: 100px 0;
+}
+.about .title,
+.skill .title{
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+.about .content,
+.skill .content{
+  display: flex;
+  justify-content: center;
+}
+.about .flex{
+  width: 500px;
+  display: flex;
+}
+.about .flex .left{
+  width: 100%;
+  padding: 20px;
+}
+.about .flex .right{
+  width: 100%;
+  padding: 20px;
+}
+
+.skill{
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.skill .title{
+  color: grey;
+}
+.skill .content .flex{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill .content .flex .kotak{
+  width: 45%;
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  margin: 10px;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+.skill .content .flex .kotak .logo{
+  text-align: center;
+  padding: 15px 0;
+}
+.skill .content .flex .kotak .logo i{
+  font-size: 40px;
+}
+.skill .content .flex .kotak .nama{
+  font-size: 25px;
+  font-weight: 600;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.skill .content .flex .ukuran{
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.skill .content .flex .kotak:hover{
+  background: crimson;
+  color: white;
+}
+
+footer{
+  width: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .sosmed,
+footer .library{
+  width: 500px;
+  padding: 50px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+footer .sosmed .flex,
+footer .library .flex{
+  display: flex;
+  flex-direction: column;
+}
+footer .sosmed .flex a,
+footer .library .flex a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+footer .foot{
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+footer .penutupan{
+  padding: 40px 20px;
+}
+@media (max-width:720px){
+  .navbar .title{
+    font-size: 25px;
+  }
+  .navbar .bars{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .bars::before{
+    content: '';
+    position: absolute;
+    background: black;
+    width: 35px;
+    height: 5px;
+    transform: translateY(-8px);
+    transition: 0.3s;
+  }
+  .navbar .bars::after{
+    content: '';
+    position: absolute;
+    background: black;
+    width: 35px;
+    height: 5px;
+    transform: translateY(8px);
+    box-shadow: 0 -8px 0 0 rgba(0,0,0,1);
+    transition: 0.3s;
+  }
+  .navbar.active .bars::before{
+    transform: translateY(0) rotate(-45deg);
+  }
+  .navbar.active .bars::after{
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 0;
+  }
+  .navbar .link{
+    width: 100%;
+    height: 0;/*250px*/
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background: white;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 0 0 0;
+    padding: 0;
+  }
+  .navbar.active .link{
+    height: 220px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+  .navbar .link ul{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .link ul li{
+    margin: 15px 0;
+  }
+  
+  .home .content{
+    width: 250px;
+  }
+  .about .content .flex{
+    width: auto;
+    flex-direction: column;
+  }
+  
+  .skill .content .flex{
+    width: 80%;
+  }
+  .skill .content .flex .kotak{
+    width: 100%;
+  }
+  
+  footer .sosmed,
+  footer .library{
+    width: 100%;
+  }
+}
